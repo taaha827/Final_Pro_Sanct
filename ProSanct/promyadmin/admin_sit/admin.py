@@ -11,8 +11,8 @@ class DataAdmin(admin.ModelAdmin):
 	    ('Brand Information', {'fields': ['brandname']}),
         ('Image',               {'fields': ['image_tag']}),
         ('Sales Information', {'fields': ['city','category','salestype','percentageoff','bannertype','startdate','enddate','extractiondate']}),
-        
- 
+        ('Dummy Information',{'fields':['city']})
+
     ]
 
 	readonly_fields = ['image_tag','brandname']
@@ -23,5 +23,4 @@ class BrandAdmin(admin.ModelAdmin):
 	list_display=['brandname','tag','attribute','value']
 admin.site.register(DarazData,DataAdmin)
 admin.site.register(Brands,BrandAdmin)
-admin.site.register(Warnings,WarningAdmin) 
-
+admin.site.register(Warnings,WarningAdmin)

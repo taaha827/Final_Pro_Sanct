@@ -1,5 +1,5 @@
 import pymysql
-
+import glob
 class Database:
 
     host = 'localhost'
@@ -25,7 +25,7 @@ class Database:
     def query(self, query):
         cursor = self.connection.cursor( pymysql.cursors.DictCursor )
         cursor.execute(query)
-
+        print("Something has changed")
         return cursor.fetchall()
 
     def __del__(self):
